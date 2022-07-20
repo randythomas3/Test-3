@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    padding: 0%;
+    margin: 0%;
+}
+/* div{
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+
+} */
+
+.first-line , .second-line , .third-line {
+    /* background-color: red; */
+    width: 100vw;
+    height: 33vh;
+    display: flex;
+
+}
+.c1 , .c2 , .c3  {
+    background-image: url("2.jpg");
+    background-color: blue;
+    flex: 1;
+    background-repeat:no-repeat ;
+}
