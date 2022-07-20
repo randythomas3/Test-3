@@ -276,7 +276,7 @@ function degToRad(degrees) {
 // z5 = 5x + 8y
 // z6 = x + y + x + y + y + x + y + y + x + y + x + y + y + x + y + x + y + y + x + y + y
 // }
-// // [0 ,1 ,1, 2, 3, 5, 8, 13, 21, ...]
+//
 
 
 // function writeFab(len){
@@ -314,14 +314,15 @@ function degToRad(degrees) {
 //         return 
 //     }
     
-
+//  // [0 ,1 ,1, 2, 3, 5, 8, 13, 21, 34, 55, ...]
     function fb(n){
-        let n1,n2,n3,x;
-        n1 = 0 
+        let n1,n2,n3;
+        n1 = -1 
         n2 = 1
         for(let i = 0 ; i < n ; i++){
-              //           n1   n2   n3
-              //  1   2    3    5    8
+              //  n1   n2   n3  previous
+              //       n1   n2   n3  next
+              //  0    1    1    2    3    5    8    13
             n3 = n1 + n2   //  1 2  3   5  8
             console.log(n3) // 
             n1 = n2       //  1  1  2  3   5
@@ -329,7 +330,22 @@ function degToRad(degrees) {
         }
     }
 
-// failed attempt to do a F that is return fabino series
+    function fbRange(loops, firstNum = -1, secondNum = 1){
+      let n1,n2,n3;
+      n1 = firstNum 
+      n2 = secondNum
+      for(let i = 0 ; i < loops ; i++){
+            //  n1   n2   n3  previous
+            //       n1   n2   n3  next
+            //  0    1    2    3    5    8    13
+          n3 = n1 + n2   //  1 2  3   5  8
+          console.log(n3) // 
+          n1 = n2       //  1  1  2  3   5
+          n2 = n3        //  1  2  3  5   8
+      }
+  }
+
+// failed attempt to do a F that is return Fibonacci series
 // in the end i did it
 // //////////////////////////////////////////////////////////////////////////////////
 
