@@ -349,6 +349,91 @@ function degToRad(degrees) {
 // in the end i did it
 // //////////////////////////////////////////////////////////////////////////////////
 
+function family(generation){
+	let y = ""
+	let x = "great "
+	for(let i = 0 ; i < generation ; i++) {
+		y += x
+	}
+		return `${y}grandson`
+}
+//  it will write great as many times as you want
+// ////////////////////////////////////////////////////////////////
+// sevenBoom([1, 2, 3, 7, 5, 6, 7])
+let x = false
+function sevenBoom(arr){
+  arr.forEach(ele)
+  if (x==true){
+    x = false
+    return "boom"
+}
+}
+function ele(a){
+  if (a === 7){ x = true}
+}
+// exercise from EDABIT hard level (I guess) return boom if there is 7 in the arr
+// ///////////////////////////////////////////////////////////////////////////
+function integer(n){
+  let y = 0
+  let sum = 0
+  for(let i = 1; i < 30 ; i++){
+    y = Math.floor(n%10**i/10**(i-1))
+    sum += y
+  }
+  console.log(sum)
+  if (sum%2 === 0){
+      return "Evenish"
+  }
+  else {
+    return "Oddish"
+  }
+}
+
+// this function will return the sum of all the individuals
+// numbers in a big number and tell you whether it's oddish or evenish
+// https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH
+// ///////////////////////////////////////////////////////////////////////////////////
+// trackRobot(20, 30, 10, 40)
+function trackRobot(n1=0, n2=0, n3=0, n4=0){
+  let x = 0
+  let y = 0
+    y = y + n1 // 20
+    x = x + n2 // 30
+    y = y - n3 // 10
+    x = x - n4 // -10
+    return `(${x}, ${y})`
+}
+// return the robot position
+// https://edabit.com/challenge/jfpfpH6w42tZeRo2T
+// ///////////////////////////////////////////////////////////////////
+//  
+function admirable(n){
+  let divisors = 0 
+  let sum = 0
+  for (let i = 2 ; i <= n ;i++){
+    if(n%i === 0){
+      divisors = n/i
+      sum += divisors
+    console.log(divisors)
+    // console.log(n/i*-2)
+    }
+ }
+ for (let j = 2 ; j <= n ;j++){
+  if(n%j === 0){
+      divisors = n/j
+      if ((divisors*-2)+sum === n){ console.log(`and it's admirable ${divisors}`) }
+    }}
+  if (sum === n) {console.log(`and it's perfect`)}
+  return `sum is ${sum}`
+}
+// return if a number is perfect or admirable
+// https://edabit.com/challenge/WEhe9MCnyZG8WhN9Z
+// /////////////////////////////////////////////////////////////////
+
+
+
+
+
 
 
 
