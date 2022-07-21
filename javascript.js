@@ -393,7 +393,31 @@ function integer(n){
 // numbers in a big number and tell you whether it's oddish or evenish
 // https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH
 // ///////////////////////////////////////////////////////////////////////////////////
-// trackRobot(20, 30, 10, 40)
+
+//            0   1   2   3
+  // let arr = [20, 30, 10, 40]
+  // for(let i = 0; i < arr.length; i++){
+  //   if(i%2===0){ y = y + arr[i] }
+  //   else{x = x + arr[i] }
+  // }
+  let myArray =[20, 30, 10, 40];
+
+  function trackLoop(n){return n%4===0};
+  
+  function trackRobot2(arr){
+    let x = 0;
+    let y = 0;
+    for(let i = 0; i < arr.length; i++){
+        // 01 -23 45 -67 89 -1011 1213
+      if     (trackLoop(i+4)){y += arr[i]}          // 0 4 8 12 , -2 -6 -10
+      else if(trackLoop(i+3)){x += arr[i]}        // 1 5 9 13 , -3 -7 -11
+      else if(trackLoop(i+2)){y -= arr[i]} 
+      else if(trackLoop(i+1)){x -= arr[i]} 
+    }
+      return `(${x}, ${y})`
+  }
+
+  // trackRobot(20, 30, 10, 40)
 function trackRobot(n1=0, n2=0, n3=0, n4=0){
   let x = 0
   let y = 0
