@@ -400,8 +400,7 @@ function integer(n){
   //   if(i%2===0){ y = y + arr[i] }
   //   else{x = x + arr[i] }
   // }
-  let myArray =[20, 30, 10, 40];
-
+  let myArray = [20, 30, 10, 40];
   function trackLoop(n){return n%4===0};
   
   function trackRobot2(arr){
